@@ -29,7 +29,7 @@ export default async function register($app: Hono) {
     });
 
     // Redirect sub.store to vercel webpage
-    $app.get('/', async (c: Context) => c.redirect('https://sub.r2s.site/', 302));
+    $app.get('/', async (c: Context) => c.redirect('https://sub-store-workers.vercel.app/', 302));
 
     $app.all('/', (c: Context) => {
         return c.text('Hello from sub-store, made with ❤️ by Peng-YM');
